@@ -1,0 +1,11 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+header {
+  @include mobile-only {
+    background-color: $light-gray-color;
+  }
+  @include tablet-only {
+    background-color: $turquoise-green-color;
+  }
+}
