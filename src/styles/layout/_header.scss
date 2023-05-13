@@ -1,0 +1,31 @@
+.header {
+  background-color: $color-conch-shell;
+  color: $color-wenge;
+
+  &__container {
+    @include flex-space-between;
+
+    gap: 16px;
+    margin: auto;
+    max-width: $container-large;
+    padding: 40px 0;
+    width: 100%;
+
+    @include mobile-only {
+      padding: 20px 0;
+    }
+  }
+
+  &__logo {
+    border-color: $color-raspberry-blush;
+    border-radius: 8px 0;
+    border-style: solid;
+    border-width: 0 4px 4px 0;
+    flex-shrink: 0;
+    padding: 0 8px 8px 0;
+
+    // @include mobile-only {
+    //   width: min-content;
+    // }
+  }
+}

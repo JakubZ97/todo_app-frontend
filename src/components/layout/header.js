@@ -1,16 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-
-import headerStyles from './header.module.scss';
+import Navbar from './Navbar';
 
 export default function Header() {
   return (
-    <header className={headerStyles.header}>
-      <h1>To Do</h1>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="create-task">Create task</NavLink>
-      </nav>
+    <header className="header font-v2">
+      <div className="header__container">
+        <h1 className="header__logo">To Do</h1>
+        <Navbar />
+      </div>
     </header>
   );
 }

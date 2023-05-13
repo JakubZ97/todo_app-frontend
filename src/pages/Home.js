@@ -1,9 +1,5 @@
-import Tasks from '../components/common/tasks';
+import Tasks from '../components/common/Tasks';
 
-export default function Home({ tasks }) {
-  return (
-    <div className="App">
-      <Tasks tasks={tasks} />
-    </div>
-  );
+export default function Home({ tasks, formatedDate }) {
+  return <Tasks tasks={tasks} formatedDate={formatedDate} />;
 }

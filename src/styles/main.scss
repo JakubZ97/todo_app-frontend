@@ -1,5 +1,14 @@
-@import "./utils/variables";
-@import "./utils/mixins";
+@import './utils/variables';
+@import './utils/mixins';
 
-@import "./base/reset";
-@import "./base/typography";
+@import './base/reset';
+@import './base/typography';
+
+@import './components/links';
+@import './components/forms';
+@import './components/task';
+
+@import './layout/header';
+@import './layout/navbar';
+
+@import './pages/root';

@@ -1,0 +1,41 @@
+.form-v1 {
+  @extend .font-v4;
+
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    font-size: inherit;
+    padding: 6px;
+
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+  input[type='text'] {
+    background-color: transparent;
+    border-width: 2px 0 2px 2px;
+    border-radius: 8px 0 0 8px;
+    border-style: solid;
+    border-color: $color-raspberry-blush;
+    width: 100%;
+  }
+
+  input[type='submit'] {
+    background-color: $color-raspberry-blush;
+    background-image: url('../../assets/search.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: solid 2px $color-raspberry-blush;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 300ms;
+    width: 40px;
+
+    &:hover {
+      background-color: $color-starry-night-blue;
+    }
+  }
+}

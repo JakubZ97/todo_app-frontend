@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+
+  @include mobile-only {
+    align-items: flex-end;
+    flex-direction: column-reverse;
+  }
+
+  &__link-container {
+    display: flex;
+    flex-shrink: 0;
+    gap: 16px;
+  }
+}

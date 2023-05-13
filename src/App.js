@@ -7,12 +7,14 @@ import {
 import { useState, useEffect } from 'react';
 
 import Home from './pages/Home';
+import AddTask from './pages/CreateTask';
+import EditTask from './pages/EditTask';
 
 import RootLayout from './layouts/RootLayout';
-import AddTask from './pages/CreateTask';
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [error, setError] = useState({});
 
   useEffect(() => {
     fetchTasks();
@@ -20,21 +22,37 @@ function App() {
 
   const fetchTasks = async () => {
     const response = await fetch('/api/todo');
-    const jsonData = await response.json();
 
     if (response.ok) {
+      const jsonData = await response.json();
       setTasks(jsonData);
+    } else {
+      const { status, statusText } = response;
+      setError({ status, statusText });
     }
+  };
+
+  const formatedDate = (oldDate) => {
+    const date = new Date(oldDate);
+
+    return date.toLocaleString();
   };
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home tasks={tasks} />} />
+        <Route
+          index
+          element={<Home tasks={tasks} formatedDate={formatedDate} />}
+        />
         <Route
           path="/create-task"
           element={<AddTask fetchTasks={fetchTasks} />}
         />
+        <Route
+          path="/:id"
+          element={<EditTask formatedDate={formatedDate} />}
+        ></Route>
       </Route>
     )
   );
