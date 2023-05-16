@@ -6,9 +6,9 @@ import {
 } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import Home from './pages/Home';
-import AddTask from './pages/CreateTask';
-import EditTask from './pages/EditTask';
+import HomePage from './pages/HomePage';
+import CreateTaskPage from './pages/CreateTaskPage';
+import EditTaskPage from './pages/EditTaskPage';
 
 import RootLayout from './layouts/RootLayout';
 
@@ -43,16 +43,20 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route
           index
-          element={<Home tasks={tasks} formatedDate={formatedDate} />}
+          element={<HomePage tasks={tasks} formatedDate={formatedDate} />}
         />
         <Route
           path="/create-task"
-          element={<AddTask fetchTasks={fetchTasks} />}
+          element={<CreateTaskPage fetchTasks={fetchTasks} />}
         />
         <Route
           path="/:id"
-          element={<EditTask formatedDate={formatedDate} />}
+          element={<EditTaskPage formatedDate={formatedDate} />}
         ></Route>
+        <Route
+          path="/search"
+          element={<CreateTaskPage fetchTasks={fetchTasks} />}
+        />
       </Route>
     )
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleTask from '../components/common/SingleTask';
 
-export default function EditTask({ formatedDate }) {
+export default function EditTaskPage({ formatedDate }) {
   return <SingleTask formatedDate={formatedDate} />;
 }
