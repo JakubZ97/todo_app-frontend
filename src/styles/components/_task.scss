@@ -1,0 +1,73 @@
+.task {
+  align-items: stretch;
+  background-color: $color-paynes-gray;
+  border-radius: 8px;
+  color: $color-ghost-white;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  transition: scale 300ms;
+
+  @include desktop-only {
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  &__content-container {
+    margin-right: 8px;
+  }
+
+  &__header {
+    @extend .font-v3;
+
+    padding-bottom: 16px;
+    color: $color-ghost-white;
+    text-transform: uppercase;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__description {
+    @extend .font-v4;
+
+    padding-bottom: 8px;
+  }
+
+  &__timestamp {
+    @extend .font-v5;
+  }
+
+  &__button-container {
+    @include flex-center;
+
+    gap: 8px;
+
+    @include mobile-only {
+      flex-direction: column;
+    }
+  }
+
+  &__edit-button,
+  &__delete-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px;
+    vertical-align: middle;
+
+    > img {
+      height: 20px;
+      filter: invert(97%) sepia(50%) saturate(237%) hue-rotate(180deg)
+        brightness(100%) contrast(96%);
+      transition: filter 300ms;
+      width: 20px;
+    }
+
+    &:hover > img {
+      filter: invert(89%) sepia(21%) saturate(216%) hue-rotate(128deg)
+        brightness(90%) contrast(98%);
+    }
+  }
+}
