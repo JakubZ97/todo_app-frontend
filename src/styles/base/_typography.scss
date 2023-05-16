@@ -23,10 +23,17 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
+  line-height: 1;
 }
 
 .font-v4 {
   @extend .font-v3;
 
   font-weight: 300;
+}
+
+.font-v5 {
+  @extend .font-v3;
+
+  font-size: 12px;
 }

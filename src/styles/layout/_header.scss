@@ -1,6 +1,6 @@
 .header {
-  background-color: $color-conch-shell;
-  color: $color-wenge;
+  background-color: $color-charcoal;
+  color: $color-ghost-white;
 
   &__container {
     @include flex-space-between;
@@ -17,7 +17,7 @@
   }
 
   &__logo {
-    border-color: $color-raspberry-blush;
+    border-color: $color-ghost-white;
     border-radius: 8px 0;
     border-style: solid;
     border-width: 0 4px 4px 0;

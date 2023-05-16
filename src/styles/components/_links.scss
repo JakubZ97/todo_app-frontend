@@ -3,18 +3,13 @@
   @include flex-center;
 
   border-radius: 12px;
-  color: $color-raspberry-blush;
+  color: $color-ghost-white;
   padding: 8px;
   text-decoration: none;
   transition: color, background-color 300ms;
 
-  // @include not-destop {
-  //   display: block;
-  //   text-align: center;
-  // }
-
   &.active {
-    color: $color-new-age;
-    background-color: $color-starry-night-blue;
+    color: $color-black;
+    background-color: $color-light-blue;
   }
 }
