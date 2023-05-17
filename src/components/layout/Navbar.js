@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({ setFilteredTasks }) {
   const [inputValue, setinputValue] = useState('');
+  const navigate = useNavigate();
 
   const handleOnChange = (e) => {
     setinputValue(e.target.value);
@@ -11,12 +12,14 @@ export default function Navbar() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`/api/todo/search?filter=${inputValue}`);
-    const json = await res.json();
-    console.log(json);
+    const response = await fetch(`/api/todo/search?filter=${inputValue}`);
+    const json = await response.json();
 
-    setinputValue('');
-    window.location.href = `/search?filter=${inputValue}`;
+    if (response.ok) {
+      setFilteredTasks(json);
+      setinputValue('');
+      navigate(`/search?filter=${inputValue}`);
+    }
   };
 
   return (

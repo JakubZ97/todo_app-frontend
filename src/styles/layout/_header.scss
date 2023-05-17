@@ -16,16 +16,17 @@
     }
   }
 
+  a {
+    flex-shrink: 0;
+  }
+
   &__logo {
     border-color: $color-ghost-white;
     border-radius: 8px 0;
     border-style: solid;
     border-width: 0 4px 4px 0;
-    flex-shrink: 0;
+    color: $color-ghost-white;
     padding: 0 8px 8px 0;
-
-    // @include mobile-only {
-    //   width: min-content;
-    // }
+    text-decoration: none;
   }
 }
