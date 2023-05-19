@@ -5,6 +5,8 @@
   color: $color-ghost-white;
   display: flex;
   justify-content: space-between;
+  margin: auto;
+  max-width: $container-medium;
   padding: 16px;
   transition: scale 300ms;
 
