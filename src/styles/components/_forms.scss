@@ -15,7 +15,7 @@
 
   input[type='text'] {
     background-color: transparent;
-    border-width: 2px 0 2px 2px;
+    border-width: 2px;
     border-radius: 8px 0 0 8px;
     border-style: solid;
     border-color: $color-paynes-gray;
@@ -43,5 +43,68 @@
     &:hover {
       background-color: $color-charcoal;
     }
+  }
+}
+
+.form-v2 {
+  background-color: $color-paynes-gray;
+  border-radius: 16px;
+  // display: flex;
+  // flex-direction: column;
+  color: $color-ghost-white;
+  margin: auto;
+  max-width: $container-medium;
+  padding: 32px;
+
+  @include mobile-only {
+    padding: 16px;
+  }
+
+  > * {
+    display: block;
+  }
+
+  input,
+  textarea {
+    @extend .font-v3;
+  }
+
+  input:not([type='submit']),
+  textarea {
+    background-color: transparent;
+    border: solid 2px $color-light-blue;
+    border-radius: 8px;
+    color: $color-ghost-white;
+    margin-bottom: 40px;
+    padding: 16px 24px;
+    width: 100%;
+
+    @include mobile-only {
+      padding: 8px 16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  label {
+    @extend .font-v6;
+
+    margin-bottom: 12px;
+  }
+
+  textarea {
+    min-height: 200px;
+    resize: none;
+  }
+
+  input[type='submit'] {
+    @extend .button-v1;
+
+    margin: auto;
+  }
+
+  .error-message {
+    @extend .font-v3;
+
+    color: orangered;
   }
 }
