@@ -1,4 +1,5 @@
 import Tasks from '../components/common/Tasks';
+import SkeletonTasks from '../components/common/SkeletonTasks';
 
 export default function HomePage({
   tasks,
@@ -10,7 +11,7 @@ export default function HomePage({
   return (
     <main>
       {loadingScreen ? (
-        <div>loading</div>
+        <SkeletonTasks />
       ) : (
         <Tasks
           tasks={tasks}
