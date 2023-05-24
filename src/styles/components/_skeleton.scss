@@ -1,0 +1,63 @@
+.skeleton-container {
+  background-color: $color-paynes-gray;
+  border-radius: 8px;
+  margin: auto;
+  max-width: $container-medium;
+  padding: 16px;
+
+  &:first-child {
+    margin-top: 32px;
+  }
+
+  &:last-child {
+    margin-bottom: 32px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  & > * {
+    animation: 2s ease infinite gradient;
+    background-image: linear-gradient(
+      90deg,
+      $color-ghost-white,
+      $color-light-blue,
+      $color-ghost-white
+    );
+    background-size: 400%;
+    background-color: $color-ghost-white;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__header {
+    height: 20px;
+    margin-bottom: 16px;
+    max-width: 50%;
+  }
+
+  &__description {
+    height: 50px;
+    margin-bottom: 8px;
+    max-width: calc(100% - 50px);
+  }
+
+  &__time {
+    height: 16px;
+    max-width: 70px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
