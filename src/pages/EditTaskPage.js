@@ -1,6 +1,17 @@
-import React from 'react';
-import SingleTask from '../components/common/SingleTask';
+import React, { useContext } from 'react';
 
-export default function EditTaskPage({ formatedDate }) {
-  return <SingleTask formatedDate={formatedDate} />;
+import Task from '../components/common/Task';
+
+import { TaskContext } from '../contexts/TaskContext';
+import Form from '../components/common/Form';
+
+export default function EditTaskPage({ formatedDate, fetchTasks }) {
+  const { editTask } = useContext(TaskContext);
+
+  return (
+    <main>
+      <Task task={editTask} formatedDate={formatedDate} />
+      <Form fetchTasks={fetchTasks} method="PATCH" id={editTask._id} />
+    </main>
+  );
 }
