@@ -7,8 +7,13 @@
 @import './components/links';
 @import './components/forms';
 @import './components/task';
+@import './components/errorPopUp';
+@import './components/tasks';
+@import './components/buttons';
+@import './components/skeleton';
 
 @import './layout/header';
 @import './layout/navbar';
+@import './layout/footer';
 
 @import './pages/root';
