@@ -9,9 +9,14 @@ export default function EditTaskPage({ formatedDate, fetchTasks }) {
   const { editTask } = useContext(TaskContext);
 
   return (
-    <main>
+    <main className="edit-task-page">
       <Task task={editTask} formatedDate={formatedDate} />
-      <Form fetchTasks={fetchTasks} method="PATCH" id={editTask._id} />
+      <Form
+        fetchTasks={fetchTasks}
+        method="PATCH"
+        id={editTask._id}
+        formTitle="Edit task"
+      />
     </main>
   );
 }

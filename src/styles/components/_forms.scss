@@ -49,10 +49,8 @@
 .form-v2 {
   background-color: $color-paynes-gray;
   border-radius: 16px;
-  // display: flex;
-  // flex-direction: column;
   color: $color-ghost-white;
-  margin: auto;
+  margin: 32px auto;
   max-width: $container-medium;
   padding: 32px;
 
@@ -60,7 +58,18 @@
     padding: 16px;
   }
 
-  > * {
+  fieldset {
+    border: none;
+  }
+
+  legend {
+    display: block;
+    margin-bottom: 24px;
+    text-align: center;
+    width: 100%;
+  }
+
+  fieldset > * {
     display: block;
   }
 
