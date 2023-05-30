@@ -1,13 +1,33 @@
-.root-layout {
-  > * {
-    padding: 0 16px;
+html,
+body,
+#root {
+  min-height: 100vh;
+}
 
-    @include mobile-only {
-      padding: 8px;
-    }
+*:focus-visible {
+  outline: 1px solid lightsalmon;
+}
+
+header,
+main,
+footer {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include mobile-only {
+    padding: 8px;
   }
 }
 
 main {
   background-color: $color-ghost-white;
+  padding: 0 16px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  & > main {
+    flex-grow: 2;
+  }
 }

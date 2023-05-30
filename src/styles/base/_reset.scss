@@ -4,11 +4,18 @@
   box-sizing: border-box;
 }
 
-button {
+button,
+input[type='submit'] {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 a {
   text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
 }
