@@ -24,11 +24,16 @@
     @extend .font-v3;
 
     padding-bottom: 16px;
-    color: $color-ghost-white;
     text-transform: uppercase;
+
     a {
-      color: inherit;
+      color: $color-ghost-white;
       text-decoration: none;
+      transition: color 300ms;
+
+      &:hover {
+        color: $color-light-blue;
+      }
     }
   }
 
@@ -36,6 +41,8 @@
     @extend .font-v4;
 
     padding-bottom: 8px;
+    word-wrap: anywhere;
+    white-space: pre-line;
   }
 
   &__timestamp {

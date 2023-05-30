@@ -28,5 +28,11 @@
     color: $color-ghost-white;
     padding: 0 8px 8px 0;
     text-decoration: none;
+    transition: border-color 300ms, color 300ms;
+
+    &:hover {
+      border-color: $color-light-blue;
+      color: $color-light-blue;
+    }
   }
 }
