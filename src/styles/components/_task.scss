@@ -21,8 +21,6 @@
   }
 
   &__header {
-    @extend .font-v3;
-
     padding-bottom: 16px;
     text-transform: uppercase;
 
@@ -38,15 +36,9 @@
   }
 
   &__description {
-    @extend .font-v4;
-
     padding-bottom: 8px;
     word-wrap: anywhere;
     white-space: pre-line;
-  }
-
-  &__timestamp {
-    @extend .font-v5;
   }
 
   &__button-container {

@@ -69,13 +69,17 @@ export default function Form({ fetchTasks, method, id, formTitle }) {
       <fieldset>
         <legend className="font-v6">{formTitle}</legend>
         {showDescriptionError ? (
-          <div className="error-message">Title or description is required</div>
+          <div className="error-message font-v3">
+            Title or description is required
+          </div>
         ) : (
           ''
         )}
-        <label htmlFor="title">Title</label>
+        <label htmlFor="title" className="font-v6">
+          Title
+        </label>
         {showTitleError ? (
-          <div className="error-message">Title is required</div>
+          <div className="error-message font-v3">Title is required</div>
         ) : (
           ''
         )}
@@ -84,9 +88,13 @@ export default function Form({ fetchTasks, method, id, formTitle }) {
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          className="font-v3"
         />
-        <label htmlFor="description">Description</label>
+        <label htmlFor="description" className="font-v6">
+          Description
+        </label>
         <textarea
+          className="font-v3"
           placeholder="Task description"
           id="description"
           value={description}
@@ -96,7 +104,7 @@ export default function Form({ fetchTasks, method, id, formTitle }) {
         />
         <input
           type="submit"
-          className="create-task-form__submit"
+          className="create-task-form__submit font-v3"
           value={method === 'POST' ? 'Create Task' : 'Update Task'}
         />
       </fieldset>

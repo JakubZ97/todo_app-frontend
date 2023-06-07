@@ -1,11 +1,8 @@
 .form-v1 {
-  @extend .font-v4;
-
   display: flex;
   flex-direction: row;
 
   > * {
-    font-size: inherit;
     padding: 6px;
 
     &:focus {
@@ -73,11 +70,6 @@
     display: block;
   }
 
-  input,
-  textarea {
-    @extend .font-v3;
-  }
-
   input:not([type='submit']),
   textarea {
     background-color: transparent;
@@ -95,8 +87,6 @@
   }
 
   label {
-    @extend .font-v6;
-
     margin-bottom: 12px;
   }
 
@@ -112,8 +102,6 @@
   }
 
   .error-message {
-    @extend .font-v3;
-
     color: orangered;
   }
 }

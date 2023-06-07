@@ -26,6 +26,7 @@ export default function Navbar({ setFilteredTasks }) {
     <nav className="navbar">
       <form className="form-v1 " onSubmit={handleSubmit}>
         <input
+          className="font-v4"
           type="text"
           placeholder="Search"
           onChange={handleOnChange}
@@ -34,10 +35,10 @@ export default function Navbar({ setFilteredTasks }) {
         <input aria-label="search" type="submit" value=""></input>
       </form>
       <div className="navbar__link-container">
-        <NavLink to="/" className="link-style-v1">
+        <NavLink to="/" className="link-style-v1 font-v3">
           Home
         </NavLink>
-        <NavLink to="create-task" className="link-style-v1">
+        <NavLink to="create-task" className="link-style-v1 font-v3">
           Create task
         </NavLink>
       </div>
